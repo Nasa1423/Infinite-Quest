@@ -532,7 +532,7 @@ while 1:
 							work = False
 				elif p == 2:
 					while work == True:
-						print(Back.BLUE+Fore.GREEN'Привет, за квестами пришел?')
+						print(Back.BLUE+Fore.GREEN+'Привет, за квестами пришел?')
 						print()
 						print('1)Получить квест')
 						print()
@@ -577,13 +577,14 @@ while 1:
 								print()
 							elif questmoney == True:
 								if questmoneyvalue >= questmoneyneed:
-									r = random(50,400)
+									r = random.randint(50,400)
 									os.system("cls")
 									print('Красава, ты получаешь за квест '+ str(r) +' монет')
 									print()
 									money += r
 									questmoneyneed = 0
 									questmoneyvalue = 0
+									questmoney = False
 							else:
 								if questxpvalue>= questxpneed:
 									r = random.randint(100,500)
@@ -591,7 +592,8 @@ while 1:
 									print('Крос, ты получаешь за квест '+ str(r) + ' монет')
 									print()
 									questxpneed = 0
-									questxpvalue = 0		
+									questxpvalue = 0
+									questxp = False
 						elif l == '3':
 							work = False
 						else:
